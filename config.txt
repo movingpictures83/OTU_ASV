@@ -1,0 +1,2 @@
+Prefix pipelines/ASV/
+Plugin CSVNormalize inputfile ericsfile.csv outputfile ericsfile.norm.csv
