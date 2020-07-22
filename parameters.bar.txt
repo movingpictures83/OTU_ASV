@@ -1,0 +1,4 @@
+otufile	pipelines/ASV/asv_abund.norm.transpose.csv
+mapping	pipelines/ASV/asv_map.csv
+tree	pipelines/ASV/asv_tax.csv
+column	Phylum
