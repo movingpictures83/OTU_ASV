@@ -1,2 +1,4 @@
 Prefix pipelines/ASV/
-Plugin CSVNormalize inputfile ericsfile.csv outputfile ericsfile.norm.csv
+Plugin CSVNormalize inputfile asv_abund.csv outputfile asv_abund.norm.csv
+Plugin CSVTranspose inputfile asv_abund.norm.csv outputfile asv_abund.transpose.csv
+Plugin Bar inputfile parameters.bar.txt outputfile barplot
