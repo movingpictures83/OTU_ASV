@@ -1,0 +1,2 @@
+csvfile1	pipelines/ASV/asv_abund.norm.genus.pooled.withqiime.csv
+csvfile2	pipelines/ASV/qiime.genus.norm.csv

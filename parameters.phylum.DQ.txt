@@ -1,0 +1,2 @@
+csvfile1	pipelines/ASV/DADA2/phylum/Alpha1.norm.withqiime.csv
+csvfile2	pipelines/ASV/QIIME/phylum/Alpha1.norm.csv

@@ -1,0 +1,2 @@
+csvfile1	pipelines/ASV/asv_abund.norm.order.withqiime.csv
+csvfile2	pipelines/ASV/qiime.order.norm.csv
