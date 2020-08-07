@@ -1,0 +1,7 @@
+Plugin CSVTranspose inputfile Alpha1.transpose.csv outputfile Alpha1.unsorted.csv
+Plugin CSVRemove inputfile ../../remove43.txt outputfile Alpha1.unsorted.tmp.csv
+Plugin CSVRemove inputfile ../../remove51.txt outputfile Alpha1.unsorted.csv
+Plugin CSVSort inputfile Alpha1.unsorted.csv outputfile Alpha1.csv
+Plugin CSVTranspose inputfile Alpha1.csv outputfile Alpha1.transpose.csv
+Plugin CSVNormalize inputfile Alpha1.csv outputfile Alpha1.norm.csv
+Plugin CSVTranspose inputfile Alpha1.norm.csv outputfile Alpha1.transpose.norm.csv
