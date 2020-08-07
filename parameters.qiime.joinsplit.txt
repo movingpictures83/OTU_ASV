@@ -1,0 +1,3 @@
+otufile	otu_table.csv
+mapping	metadata_table.csv
+tree	taxonomy_table.csv
