@@ -1,0 +1,2 @@
+csvfile1	pipelines/ASV/DADA2/class/Alpha1.norm.csv
+csvfile2	pipelines/ASV/Mothur/class/Alpha1.norm.csv
