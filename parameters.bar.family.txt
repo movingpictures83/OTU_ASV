@@ -1,0 +1,4 @@
+otufile	asv_abund.norm.transpose.csv
+mapping	/biorg/data/Alpha1/ASV/asv_map.csv
+tree	/biorg/data/Alpha1/ASV/asv_tax.csv
+column	Family
