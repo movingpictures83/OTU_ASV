@@ -1,23 +1,23 @@
 Prefix pipelines/ASV/
-#Plugin CSVTranspose inputfile /biorg/data/Alpha1/ASV/asv_abund.csv outputfile asv_abund.transpose.csv
-#Plugin CSVNormalize inputfile /biorg/data/Alpha1/ASV/asv_abund.csv outputfile asv_abund.norm.csv
-#Plugin CSVTranspose inputfile asv_abund.norm.csv outputfile asv_abund.norm.transpose.csv
-#Plugin Bar inputfile parameters.bar.phylum.txt outputfile barplot.phylum
-#Plugin Bar inputfile parameters.bar.class.txt outputfile barplot.class
-#Plugin Bar inputfile parameters.bar.order.txt outputfile barplot.order
-#Plugin Bar inputfile parameters.bar.family.txt outputfile barplot.family
-#Plugin Bar inputfile parameters.bar.genus.txt outputfile barplot.genus
+Plugin CSVTranspose inputfile DADA2/asv_abund.csv outputfile DADA2/asv_abund.transpose.csv
+Plugin CSVNormalize inputfile DADA2/asv_abund.csv outputfile DADA2/asv_abund.norm.csv
+Plugin CSVTranspose inputfile DADA2/asv_abund.norm.csv outputfile DADA2/asv_abund.norm.transpose.csv
+Plugin Bar inputfile parameters/parameters.bar.phylum.txt outputfile barplot/barplot.phylum
+Plugin Bar inputfile parameters/parameters.bar.class.txt outputfile barplot/barplot.class
+Plugin Bar inputfile parameters/parameters.bar.order.txt outputfile barplot/barplot.order
+Plugin Bar inputfile parameters/parameters.bar.family.txt outputfile barplot/barplot.family
+Plugin Bar inputfile parameters/parameters.bar.genus.txt outputfile barplot/barplot.genus
 
 
 Kitty Mothur
 Plugin SplitTableProcessing inputfile tax.summary outputfile Alpha1.transpose
 Kitty DADA2
-Plugin CSVJoinSplit inputfile ../parameters.dada2.joinsplit.txt outputfile Alpha1
+Plugin CSVJoinSplit inputfile ../parameters/parameters.dada2.joinsplit.txt outputfile Alpha1
 Kitty QIIME
-Plugin CSVJoinSplit inputfile ../parameters.qiime.joinsplit.txt outputfile Alpha1
+Plugin CSVJoinSplit inputfile ../parameters/parameters.qiime.joinsplit.txt outputfile Alpha1
 
-Kitty Mothur/kingdom
-Pipeline pipelines/ASV/config.run.mothur.txt
+#Kitty Mothur/kingdom
+#Pipeline pipelines/ASV/config.run.mothur.txt
 Kitty Mothur/phylum
 Pipeline pipelines/ASV/config.run.mothur.txt
 Kitty Mothur/class
@@ -28,8 +28,8 @@ Kitty Mothur/family
 Pipeline pipelines/ASV/config.run.mothur.txt
 Kitty Mothur/genus
 Pipeline pipelines/ASV/config.run.mothur.txt
-Kitty DADA2/kingdom
-Pipeline pipelines/ASV/config.run.DQ.txt
+#Kitty DADA2/kingdom
+#Pipeline pipelines/ASV/config.run.DQ.txt
 Kitty DADA2/phylum
 Pipeline pipelines/ASV/config.run.DQ.txt
 Kitty DADA2/class
@@ -41,8 +41,8 @@ Pipeline pipelines/ASV/config.run.DQ.txt
 Kitty DADA2/genus
 Pipeline pipelines/ASV/config.run.DQ.txt
 Plugin CSVPool inputfile Alpha1.norm.csv outputfile Alpha1.norm.pooled.csv
-Kitty QIIME/kingdom
-Pipeline pipelines/ASV/config.run.DQ.txt
+#Kitty QIIME/kingdom
+#Pipeline pipelines/ASV/config.run.DQ.txt
 Kitty QIIME/phylum
 Pipeline pipelines/ASV/config.run.DQ.txt
 Kitty QIIME/class
@@ -59,66 +59,66 @@ Plugin CSVPool inputfile Alpha1.norm.csv outputfile Alpha1.norm.pooled.csv
 # ASV-Mothur Overlap
 #Prefix pipelines/ASV
 Kitty Overlap/DM/phylum
-Plugin CSVOverlap inputfile ../../../parameters.phylum.DM.txt outputfile overlap.tmp.csv
-Plugin CSVRename inputfile ../../../rename.DM.txt outputfile overlap.csv
+Plugin CSVOverlap inputfile ../../../parameters/parameters.phylum.DM.txt outputfile overlap.tmp.csv
+Plugin CSVRename inputfile ../../../rename/rename.DM.txt outputfile overlap.csv
 Kitty Overlap/DM/class
-Plugin CSVOverlap inputfile ../../../parameters.class.DM.txt outputfile overlap.tmp.csv
-Plugin CSVRename inputfile ../../../rename.DM.txt outputfile overlap.csv
+Plugin CSVOverlap inputfile ../../../parameters/parameters.class.DM.txt outputfile overlap.tmp.csv
+Plugin CSVRename inputfile ../../../rename/rename.DM.txt outputfile overlap.csv
 Kitty Overlap/DM/order
-Plugin CSVOverlap inputfile ../../../parameters.order.DM.txt outputfile overlap.tmp.csv
-Plugin CSVRename inputfile ../../../rename.DM.txt outputfile overlap.csv
+Plugin CSVOverlap inputfile ../../../parameters/parameters.order.DM.txt outputfile overlap.tmp.csv
+Plugin CSVRename inputfile ../../../rename/rename.DM.txt outputfile overlap.csv
 Kitty Overlap/DM/family
-Plugin CSVOverlap inputfile ../../../parameters.family.DM.txt outputfile overlap.tmp.csv
-Plugin CSVRename inputfile ../../../rename.DM.txt outputfile overlap.csv
+Plugin CSVOverlap inputfile ../../../parameters/parameters.family.DM.txt outputfile overlap.tmp.csv
+Plugin CSVRename inputfile ../../../rename/rename.DM.txt outputfile overlap.csv
 Kitty Overlap/DM/genus
-Plugin CSVOverlap inputfile ../../../parameters.genus.DM.txt outputfile overlap.tmp.csv
-Plugin CSVRename inputfile ../../../rename.DM.txt outputfile overlap.csv
+Plugin CSVOverlap inputfile ../../../parameters/parameters.genus.DM.txt outputfile overlap.tmp.csv
+Plugin CSVRename inputfile ../../../rename/rename.DM.txt outputfile overlap.csv
 ####################################################################################################
 
 Kitty DADA2/phylum
-Plugin CSVRemove inputfile ../../remove47.txt outputfile Alpha1.norm.withqiime.tmp.csv 
-Plugin CSVRemove inputfile ../../remove48.txt outputfile Alpha1.norm.withqiime.csv 
+Plugin CSVRemove inputfile ../../remove/remove47.txt outputfile Alpha1.norm.withqiime.tmp.csv 
+Plugin CSVRemove inputfile ../../remove/remove48.txt outputfile Alpha1.norm.withqiime.csv 
 Kitty DADA2/class
-Plugin CSVRemove inputfile ../../remove47.txt outputfile Alpha1.norm.withqiime.tmp.csv 
-Plugin CSVRemove inputfile ../../remove48.txt outputfile Alpha1.norm.withqiime.csv 
+Plugin CSVRemove inputfile ../../remove/remove47.txt outputfile Alpha1.norm.withqiime.tmp.csv 
+Plugin CSVRemove inputfile ../../remove/remove48.txt outputfile Alpha1.norm.withqiime.csv 
 Kitty DADA2/order
-Plugin CSVRemove inputfile ../../remove47.txt outputfile Alpha1.norm.withqiime.tmp.csv 
-Plugin CSVRemove inputfile ../../remove48.txt outputfile Alpha1.norm.withqiime.csv 
+Plugin CSVRemove inputfile ../../remove/remove47.txt outputfile Alpha1.norm.withqiime.tmp.csv 
+Plugin CSVRemove inputfile ../../remove/remove48.txt outputfile Alpha1.norm.withqiime.csv 
 Kitty DADA2/family
-Plugin CSVRemove inputfile ../../remove47.txt outputfile Alpha1.norm.withqiime.tmp.csv 
-Plugin CSVRemove inputfile ../../remove48.txt outputfile Alpha1.norm.withqiime.csv 
+Plugin CSVRemove inputfile ../../remove/remove47.txt outputfile Alpha1.norm.withqiime.tmp.csv 
+Plugin CSVRemove inputfile ../../remove/remove48.txt outputfile Alpha1.norm.withqiime.csv 
 Kitty DADA2/genus
-Plugin CSVRemove inputfile ../../remove47.txt outputfile Alpha1.norm.withqiime.tmp.csv 
-Plugin CSVRemove inputfile ../../remove48.txt outputfile Alpha1.norm.withqiime.csv 
+Plugin CSVRemove inputfile ../../remove/remove47.txt outputfile Alpha1.norm.withqiime.tmp.csv 
+Plugin CSVRemove inputfile ../../remove/remove48.txt outputfile Alpha1.norm.withqiime.csv 
 
 
 ####################################################################################################
 # ASV-QIIME Overlap
 Kitty Overlap/DQ/phylum
-Plugin CSVOverlap inputfile ../../../parameters.phylum.DQ.txt outputfile overlap.tmp.csv
-Plugin CSVRename inputfile ../../../rename.DQ.txt outputfile overlap.csv
+Plugin CSVOverlap inputfile ../../../parameters/parameters.phylum.DQ.txt outputfile overlap.tmp.csv
+Plugin CSVRename inputfile ../../../rename/rename.DQ.txt outputfile overlap.csv
 Kitty Overlap/DQ/class
-Plugin CSVOverlap inputfile ../../../parameters.class.DQ.txt outputfile overlap.tmp.csv
-Plugin CSVRename inputfile ../../../rename.DQ.txt outputfile overlap.csv
+Plugin CSVOverlap inputfile ../../../parameters/parameters.class.DQ.txt outputfile overlap.tmp.csv
+Plugin CSVRename inputfile ../../../rename/rename.DQ.txt outputfile overlap.csv
 Kitty Overlap/DQ/order
-Plugin CSVOverlap inputfile ../../../parameters.order.DQ.txt outputfile overlap.tmp.csv
-Plugin CSVRename inputfile ../../../rename.DQ.txt outputfile overlap.csv
+Plugin CSVOverlap inputfile ../../../parameters/parameters.order.DQ.txt outputfile overlap.tmp.csv
+Plugin CSVRename inputfile ../../../rename/rename.DQ.txt outputfile overlap.csv
 Kitty Overlap/DQ/family
-Plugin CSVOverlap inputfile ../../../parameters.family.DQ.txt outputfile overlap.tmp.csv
-Plugin CSVRename inputfile ../../../rename.DQ.txt outputfile overlap.csv
+Plugin CSVOverlap inputfile ../../../parameters/parameters.family.DQ.txt outputfile overlap.tmp.csv
+Plugin CSVRename inputfile ../../../rename/rename.DQ.txt outputfile overlap.csv
 Kitty Overlap/DQ/genus
-Plugin CSVOverlap inputfile ../../../parameters.genus.DQ.txt outputfile overlap.tmp.csv
-Plugin CSVRename inputfile ../../../rename.DQ.txt outputfile overlap.csv
+Plugin CSVOverlap inputfile ../../../parameters/parameters.genus.DQ.txt outputfile overlap.tmp.csv
+Plugin CSVRename inputfile ../../../rename/rename.DQ.txt outputfile overlap.csv
 ####################################################################################################
 
 ####################################################################################################
 # Table of Overlaps
 Prefix pipelines/ASV/
-Plugin CSVMerge inputfile merge.phylum.txt outputfile overlap.phylum.merged.csv
-Plugin CSVMerge inputfile merge.class.txt outputfile overlap.class.merged.csv
-Plugin CSVMerge inputfile merge.order.txt outputfile overlap.order.merged.csv
-Plugin CSVMerge inputfile merge.family.txt outputfile overlap.family.merged.csv
-Plugin CSVMerge inputfile merge.genus.txt outputfile overlap.genus.merged.csv
+Plugin CSVMerge inputfile merge/merge.phylum.txt outputfile Overlap/overlap.phylum.merged.csv
+Plugin CSVMerge inputfile merge/merge.class.txt outputfile Overlap/overlap.class.merged.csv
+Plugin CSVMerge inputfile merge/merge.order.txt outputfile Overlap/overlap.order.merged.csv
+Plugin CSVMerge inputfile merge/merge.family.txt outputfile Overlap/overlap.family.merged.csv
+Plugin CSVMerge inputfile merge/merge.genus.txt outputfile Overlap/overlap.genus.merged.csv
 ####################################################################################################
 
 ####################################################################################################

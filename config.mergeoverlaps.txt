@@ -1,5 +1,5 @@
-Plugin CSVMerge inputfile ../merge.overlap.phylum.txt outputfile phylum/overlap.merged.csv
-Plugin CSVMerge inputfile ../merge.overlap.class.txt outputfile class/overlap.merged.csv
-Plugin CSVMerge inputfile ../merge.overlap.order.txt outputfile order/overlap.merged.csv
-Plugin CSVMerge inputfile ../merge.overlap.family.txt outputfile family/overlap.merged.csv
-Plugin CSVMerge inputfile ../merge.overlap.genus.txt outputfile genus/overlap.merged.csv
+Plugin CSVMerge inputfile ../merge/merge.overlap.phylum.txt outputfile phylum/overlap.merged.csv
+Plugin CSVMerge inputfile ../merge/merge.overlap.class.txt outputfile class/overlap.merged.csv
+Plugin CSVMerge inputfile ../merge/merge.overlap.order.txt outputfile order/overlap.merged.csv
+Plugin CSVMerge inputfile ../merge/merge.overlap.family.txt outputfile family/overlap.merged.csv
+Plugin CSVMerge inputfile ../merge/merge.overlap.genus.txt outputfile genus/overlap.merged.csv
