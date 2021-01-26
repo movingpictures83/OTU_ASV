@@ -1,0 +1,3 @@
+Plugin CSVTranspose inputfile Alpha1.csv outputfile Alpha1.transpose.csv
+Plugin CSVNormalize inputfile Alpha1.csv outputfile Alpha1.norm.csv
+Plugin CSVTranspose inputfile Alpha1.norm.csv outputfile Alpha1.transpose.norm.csv
