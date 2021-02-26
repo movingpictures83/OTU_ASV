@@ -1,0 +1,3 @@
+op1	metadata
+op2	tabulate
+inputfile	QZA/Samples-taxonomy-clustered.qza

@@ -1,0 +1,2 @@
+manifest	AlphaFinal1.manifest
+format	PairedEndFastqManifestPhred33V2

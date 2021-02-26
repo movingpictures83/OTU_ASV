@@ -1,0 +1,4 @@
+table	QZA/Samples-table.qza
+sequences	QZA/Samples-rep-seqs.qza
+referencesequences	QZA/silva-138-99-seqs.qza
+percidentity	0.97

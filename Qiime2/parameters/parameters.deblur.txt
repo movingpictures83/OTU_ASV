@@ -1,0 +1,2 @@
+inputfile	QZA/Samples-demux-filtered.qza
+trimlength	250

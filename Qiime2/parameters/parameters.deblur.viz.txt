@@ -1,0 +1,3 @@
+op1	deblur
+op2	visualize-stats
+deblurstats	QZA/Samples-deblur-stats.qza

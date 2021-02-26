@@ -1,0 +1,4 @@
+op1	feature-table
+op2	summarize
+table	QZA/Samples-table-or-97.qza
+metadata	AlphaFinal1.tsv
