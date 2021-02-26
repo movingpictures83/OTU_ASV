@@ -1,0 +1,14 @@
+Prefix pipelines/ASV_OTU/Qiime2/
+#Plugin FASTQ2QZA inputfile parameters/parameters.fastq2qza.txt outputfile QZA/Samples-paired-end-demux.qza
+#Plugin QualityFilter inputfile QZA/Samples-paired-end-demux.qza outputfile QZA/Samples-demux
+#Plugin Qiime2Viz inputfile parameters/parameters.demux.viz.txt outputfile QZV/Samples-demux-summary-1.qzv
+#Plugin Qiime2Viz inputfile parameters/parameters.metadata.viz.txt outputfile QZV/Samples-demux-filter-stats.qzv
+#Plugin Deblur inputfile parameters/parameters.deblur.txt outputfile QZA/Samples
+#Plugin Qiime2Viz inputfile parameters/parameters.deblur.viz.txt outputfile QZV/Samples-deblur-stats.qzv
+#Plugin Qiime2Viz inputfile parameters/parameters.featuretable.tabulate.viz.txt outputfile QZV/Samples-rep-seqs.qzv
+#Plugin Qiime2Viz inputfile parameters/parameters.featuretable.summarize.viz.txt outputfile QZV/Samples-table.qzv
+Plugin VSearch inputfile parameters/parameters.vsearch.txt outputfile QZA/Samples
+Plugin FeatureClassify inputfile parameters/parameters.feature.txt outputfile QZA/Samples-taxonomy-clustered.qza
+Plugin Qiime2Viz inputfile parameters/parameters.metadata.clustered.viz.txt outputfile QZV/Samples-taxonomy-clustered.qzv
+Plugin Qiime2Viz inputfile parameters/parameters.taxa.viz.txt outputfile QZV/Final1-taxa-bar-plotsclustered.qzv
+Plugin Qiime2Viz inputfile parameters/parameters.featuretable.summarize2.viz.txt outputfile QZV/Samples-table-or-97.qzv
