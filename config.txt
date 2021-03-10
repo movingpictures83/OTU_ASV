@@ -1,4 +1,4 @@
-Prefix pipelines/ASV/
+Prefix pipelines/ASV_OTU/
 Plugin CSVTranspose inputfile DADA2/asv_abund.csv outputfile DADA2/asv_abund.transpose.csv
 Plugin CSVNormalize inputfile DADA2/asv_abund.csv outputfile DADA2/asv_abund.norm.csv
 Plugin CSVTranspose inputfile DADA2/asv_abund.norm.csv outputfile DADA2/asv_abund.norm.transpose.csv
@@ -17,47 +17,47 @@ Kitty QIIME
 Plugin CSVJoinSplit inputfile ../parameters/parameters.qiime.joinsplit.txt outputfile Alpha1
 
 #Kitty Mothur/kingdom
-#Pipeline pipelines/ASV/config.run.mothur.txt
+#Pipeline pipelines/ASV_OTU/config.run.mothur.txt
 Kitty Mothur/phylum
-Pipeline pipelines/ASV/config.run.mothur.txt
+Pipeline pipelines/ASV_OTU/config.run.mothur.txt
 Kitty Mothur/class
-Pipeline pipelines/ASV/config.run.mothur.txt
+Pipeline pipelines/ASV_OTU/config.run.mothur.txt
 Kitty Mothur/order
-Pipeline pipelines/ASV/config.run.mothur.txt
+Pipeline pipelines/ASV_OTU/config.run.mothur.txt
 Kitty Mothur/family
-Pipeline pipelines/ASV/config.run.mothur.txt
+Pipeline pipelines/ASV_OTU/config.run.mothur.txt
 Kitty Mothur/genus
-Pipeline pipelines/ASV/config.run.mothur.txt
+Pipeline pipelines/ASV_OTU/config.run.mothur.txt
 #Kitty DADA2/kingdom
-#Pipeline pipelines/ASV/config.run.DQ.txt
+#Pipeline pipelines/ASV_OTU/config.run.DQ.txt
 Kitty DADA2/phylum
-Pipeline pipelines/ASV/config.run.DQ.txt
+Pipeline pipelines/ASV_OTU/config.run.DQ.txt
 Kitty DADA2/class
-Pipeline pipelines/ASV/config.run.DQ.txt
+Pipeline pipelines/ASV_OTU/config.run.DQ.txt
 Kitty DADA2/order
-Pipeline pipelines/ASV/config.run.DQ.txt
+Pipeline pipelines/ASV_OTU/config.run.DQ.txt
 Kitty DADA2/family
-Pipeline pipelines/ASV/config.run.DQ.txt
+Pipeline pipelines/ASV_OTU/config.run.DQ.txt
 Kitty DADA2/genus
-Pipeline pipelines/ASV/config.run.DQ.txt
+Pipeline pipelines/ASV_OTU/config.run.DQ.txt
 Plugin CSVPool inputfile Alpha1.norm.csv outputfile Alpha1.norm.pooled.csv
 #Kitty QIIME/kingdom
-#Pipeline pipelines/ASV/config.run.DQ.txt
+#Pipeline pipelines/ASV_OTU/config.run.DQ.txt
 Kitty QIIME/phylum
-Pipeline pipelines/ASV/config.run.DQ.txt
+Pipeline pipelines/ASV_OTU/config.run.DQ.txt
 Kitty QIIME/class
-Pipeline pipelines/ASV/config.run.DQ.txt
+Pipeline pipelines/ASV_OTU/config.run.DQ.txt
 Kitty QIIME/order
-Pipeline pipelines/ASV/config.run.DQ.txt
+Pipeline pipelines/ASV_OTU/config.run.DQ.txt
 Kitty QIIME/family
-Pipeline pipelines/ASV/config.run.DQ.txt
+Pipeline pipelines/ASV_OTU/config.run.DQ.txt
 Kitty QIIME/genus
-Pipeline pipelines/ASV/config.run.DQ.txt
+Pipeline pipelines/ASV_OTU/config.run.DQ.txt
 Plugin CSVPool inputfile Alpha1.norm.csv outputfile Alpha1.norm.pooled.csv
 
 ####################################################################################################
-# ASV-Mothur Overlap
-#Prefix pipelines/ASV
+# ASV_OTU-Mothur Overlap
+#Prefix pipelines/ASV_OTU
 Kitty Overlap/DM/phylum
 Plugin CSVOverlap inputfile ../../../parameters/parameters.phylum.DM.txt outputfile overlap.tmp.csv
 Plugin CSVRename inputfile ../../../rename/rename.DM.txt outputfile overlap.csv
@@ -93,7 +93,7 @@ Plugin CSVRemove inputfile ../../remove/remove48.txt outputfile Alpha1.norm.with
 
 
 ####################################################################################################
-# ASV-QIIME Overlap
+# ASV_OTU-QIIME Overlap
 Kitty Overlap/DQ/phylum
 Plugin CSVOverlap inputfile ../../../parameters/parameters.phylum.DQ.txt outputfile overlap.tmp.csv
 Plugin CSVRename inputfile ../../../rename/rename.DQ.txt outputfile overlap.csv
@@ -113,7 +113,7 @@ Plugin CSVRename inputfile ../../../rename/rename.DQ.txt outputfile overlap.csv
 
 ####################################################################################################
 # Table of Overlaps
-Prefix pipelines/ASV/
+Prefix pipelines/ASV_OTU/
 Plugin CSVMerge inputfile merge/merge.phylum.txt outputfile Overlap/overlap.phylum.merged.csv
 Plugin CSVMerge inputfile merge/merge.class.txt outputfile Overlap/overlap.class.merged.csv
 Plugin CSVMerge inputfile merge/merge.order.txt outputfile Overlap/overlap.order.merged.csv
@@ -124,10 +124,10 @@ Plugin CSVMerge inputfile merge/merge.genus.txt outputfile Overlap/overlap.genus
 ####################################################################################################
 # Mothur Coverage
 Kitty Mothur
-Pipeline pipelines/ASV/config.mergeoverlaps.txt
+Pipeline pipelines/ASV_OTU/config.mergeoverlaps.txt
 Kitty DADA2
-Pipeline pipelines/ASV/config.mergeoverlaps.txt
+Pipeline pipelines/ASV_OTU/config.mergeoverlaps.txt
 Kitty QIIME
-Pipeline pipelines/ASV/config.mergeoverlaps.txt
+Pipeline pipelines/ASV_OTU/config.mergeoverlaps.txt
 ####################################################################################################
 
