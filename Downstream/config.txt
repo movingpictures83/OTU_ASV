@@ -1,0 +1,2 @@
+Prefix pipelines/ASV_OTU/Downstream
+Pipeline pipelines/ASV_OTU/Downstream/config.runAllTests.txt

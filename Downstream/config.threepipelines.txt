@@ -1,0 +1,6 @@
+Kitty DADA
+Pipeline pipelines/ASV_OTU/Downstream/config.dada.txt
+#Kitty Qiime
+#Pipeline pipelines/ASV_OTU/Downstream/config.qiime.txt
+#Kitty Mothur
+#Pipeline pipelines/ASV_OTU/Downstream/config.mothur.txt
