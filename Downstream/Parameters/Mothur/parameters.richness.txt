@@ -1,0 +1,5 @@
+otufile Output/PhyloSeq/otu_table.csv
+mapping ../../../../sample_data.mothur.csv
+tree    Output/PhyloSeq/tax_table.csv
+column  Description
+measure Chao1
