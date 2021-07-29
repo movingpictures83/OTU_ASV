@@ -1,9 +1,0 @@
-Prefix pipelines/ASV_OTU/DADA2/
-Plugin FilterAndTrim inputfile parameters/parameters.ft.txt outputfile Filtered/filtered
-Plugin QualityProfile inputfile Filtered/ outputfile Quality/quality
-Plugin Dereplication inputfile Filtered/ outputfile Dereplicated/dereplicated
-Plugin ErrorRate inputfile Filtered/ outputfile ErrorRate/errorrate
-Plugin DADA inputfile parameters/parameters.dada.txt outputfile DADA/dada
-Plugin MergePairedEnd inputfile parameters/parameters.merge.txt outputfile Merged/merger1
-Plugin ChimeraRemove inputfile Merged/merger1.rds outputfile NoChimera/nochimeras
-Plugin ASVAssign inputfile parameters/parameters.asv.txt outputfile asv

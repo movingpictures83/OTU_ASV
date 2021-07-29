@@ -1,3 +1,0 @@
-op1	demux
-op2	summarize
-data	QZA/Samples-paired-end-demux.qza

@@ -1,5 +1,0 @@
-op1	taxa
-op2	barplot
-table	QZA/Samples-table-or-97.qza
-taxonomy	QZA/Samples-taxonomy-clustered.qza
-metadata	AlphaFinal1.tsv

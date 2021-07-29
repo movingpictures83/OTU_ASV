@@ -1,5 +1,0 @@
-otufile Input/asv_tab.csv
-mapping ../../../..//sample_data.dada.csv
-tree    Input/asv_tax.csv
-column  Description
-measure InvSimpson

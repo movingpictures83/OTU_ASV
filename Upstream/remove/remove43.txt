@@ -1,2 +1,0 @@
-csvfile	Alpha1.unsorted.csv
-row	19

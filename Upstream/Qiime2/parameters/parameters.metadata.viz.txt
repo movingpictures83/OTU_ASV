@@ -1,3 +1,0 @@
-op1	metadata
-op2	tabulate
-inputfile	QZA/Samples-demux-filter-stats.qza

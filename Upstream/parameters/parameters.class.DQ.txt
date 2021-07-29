@@ -1,2 +1,0 @@
-csvfile1	pipelines/ASV/DADA2/asv_abund.norm.class.withqiime.csv
-csvfile2	pipelines/ASV/QIIME/qiime.class.norm.csv

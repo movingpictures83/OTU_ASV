@@ -1,2 +1,0 @@
-shared  Input/HELIUS.trim.contigs.good.unique.good.filter.unique.precluster.pick.opti_mcc.shared
-taxonomy        Input/HELIUS.trim.contigs.good.unique.good.filter.unique.precluster.pick.opti_mcc.taxonomy

@@ -1,2 +1,0 @@
-csvfile	Alpha1.norm.withqiime.tmp.csv
-row	19

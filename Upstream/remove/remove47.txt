@@ -1,2 +1,0 @@
-csvfile	Alpha1.norm.csv
-row	19

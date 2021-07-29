@@ -1,3 +1,0 @@
-op1	feature-table
-op2	tabulate-seqs
-data	QZA/Samples-rep-seqs.qza

@@ -1,3 +1,0 @@
-FASTQ	Dereplicated/dereplicated
-DADA	DADA/dada
-minoverlap	5

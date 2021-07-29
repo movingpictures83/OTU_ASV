@@ -1,3 +1,0 @@
-otufile	asv_abund.csv
-mapping	asv_map.csv
-tree	asv_tax.csv

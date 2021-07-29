@@ -1,4 +1,0 @@
-otufile	DADA2/asv_abund.norm.transpose.csv
-mapping	DADA2/asv_map.csv
-tree	DADA2/asv_tax.csv
-column	Genus

@@ -1,2 +1,0 @@
-Overlap/DM/genus/overlap.csv
-Overlap/DQ/genus/overlap.csv

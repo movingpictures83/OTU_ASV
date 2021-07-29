@@ -1,3 +1,0 @@
-replace	columns
-file1	overlap.tmp.csv
-file2	../../../rename/DQ.csv

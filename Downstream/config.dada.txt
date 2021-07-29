@@ -1,6 +1,0 @@
-Plugin Richness inputfile ../../../../Parameters/DADA/parameters.richness.txt outputfile Output/Diversity/Alpha/richness
-Plugin Diversity inputfile ../../../../Parameters/DADA/parameters.diversity.txt outputfile Output/Diversity/Beta/diversity.csv
-Plugin PhyloSeqNormalize inputfile Input/asv_tab.csv outputfile Output/asv_tab.norm.csv
-Plugin Bar inputfile ../../../../Parameters/DADA/parameters.bar.txt outputfile Output/Compositional/Bar/barplot
-Plugin Krona inputfile ../../../../Parameters/DADA/parameters.krona.txt outputfile Output/Compositional/Krona/krona
-
