@@ -1,0 +1,3 @@
+"Mock1"	"Mock1Gold"
+"Mock2"	"Mock2Gold"
+"Mock3"	"Mock3Gold"

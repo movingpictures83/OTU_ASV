@@ -1,0 +1,4 @@
+#SampleID	RawReads	Description
+Mock1	36464	Mock
+Mock2	84054	Mock
+Mock3	146653	Mock

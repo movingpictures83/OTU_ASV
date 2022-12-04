@@ -1,0 +1,3 @@
+Mock1	pipelines/OTU_ASV/Mock/FASTQ/Mock1R1.trim.chop.sorted.fastq	pipelines/OTU_ASV/Mock/FASTQ/Mock1R2.trim.chop.sorted.fastq
+Mock2	pipelines/OTU_ASV/Mock/FASTQ/Mock2R1.trim.chop.sorted.fastq	pipelines/OTU_ASV/Mock/FASTQ/Mock2R2.trim.chop.sorted.fastq
+Mock3	pipelines/OTU_ASV/Mock/FASTQ/Mock3R1.trim.chop.sorted.fastq	pipelines/OTU_ASV/Mock/FASTQ/Mock3R2.trim.chop.sorted.fastq

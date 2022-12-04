@@ -1,0 +1,7 @@
+"Sample","Subject","Description","Category"
+"Mock1_F_filt.fastq.gz","Mock1","Mock",0
+"Mock2_F_filt.fastq.gz","Mock2","Mock",0
+"Mock3_F_filt.fastq.gz","Mock3","Mock",0
+"Mock1Gold","Mock1","Mock",1
+"Mock2Gold","Mock2","Mock",1
+"Mock3Gold","Mock3","Mock",1
