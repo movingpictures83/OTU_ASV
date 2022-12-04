@@ -1,0 +1,5 @@
+sample-id	forward-absolute-filepath	reverse-absolute-filepath
+Mock1	/biorg/data/HELIUS/Mock/Mock1_R1.fastq	/biorg/data/HELIUS/Mock/Mock1_R2.fastq
+Mock2	/biorg/data/HELIUS/Mock/Mock2_R1.fastq	/biorg/data/HELIUS/Mock/Mock2_R2.fastq
+Mock3	/biorg/data/HELIUS/Mock/Mock3_R1.fastq	/biorg/data/HELIUS/Mock/Mock3_R2.fastq
+
