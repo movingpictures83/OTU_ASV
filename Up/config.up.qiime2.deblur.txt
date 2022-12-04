@@ -1,0 +1,12 @@
+#Plugin VSearch inputfile parameters.vsearch.joinpairs.txt outputfile sequences-demux-joined.qza
+#Plugin Qiime2Viz inputfile ../../../../../Parameters/Up/Qiime2/Deblur/Viz/parameters.viz.demux.joined.txt outputfile sequences-demux-joined.qzv
+#Plugin Deblur inputfile parameters.deblur.denoise.txt outputfile sequences
+#Plugin Qiime2Viz inputfile ../../../../../Parameters/Up/Qiime2/Deblur/Viz/parameters.viz.deblur.txt outputfile sequences-deblur-stats.gzv
+#Plugin Qiime2Viz inputfile ../../../../../Parameters/Up/Qiime2/Viz/parameters.viz.featuretable.tabulate.txt outputfile sequences-rep-seqs
+#Plugin Qiime2Viz inputfile ../../../../../Parameters/Up/Qiime2/Deblur/Viz/parameters.viz.featuretable.summarize.txt outputfile sequences-table
+#Plugin VSearch inputfile ../../../../../Parameters/Up/Qiime2/Deblur/Viz/parameters.vsearch.uchime.txt outputfile sequences
+#Plugin Qiime2Viz inputfile ../../../../../Parameters/Up/Qiime2/Viz/parameters.viz.metadata.tabulate.txt outputfile sequences-chim-stats.qzv
+#Plugin Qiime2Filter inputfile ../../../../../Parameters/Up/Qiime2/Deblur/Filter/parameters.filter.features.txt outputfile sequences-table-nochimeras.qza
+#Plugin Qiime2Filter inputfile ../../../../../Parameters/Up/Qiime2/Deblur/Filter/parameters.filter.seqs.txt outputfile sequences-rep-seqs-nochimeras.qza
+#Plugin Qiime2Viz inputfile ../../../../../Parameters/Up/Qiime2/Deblur/Viz/parameters.viz.chimeras.txt outputfile sequences-table-nochimeras.qzv
+Pipeline pipelines/OTU_ASV/Up/config.up.qiime2.cluster.txt

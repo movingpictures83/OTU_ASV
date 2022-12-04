@@ -1,0 +1,9 @@
+#Plugin VSearch inputfile ../../../../../Parameters/Up/Qiime2/VSearch/parameters.vsearch.openref.txt outputfile Open/sequences
+#Plugin VSearch inputfile ../../../../../Parameters/Up/Qiime2/VSearch/parameters.vsearch.closedref.txt outputfile Closed/sequences
+#Plugin VSearch inputfile ../../../../../Parameters/Up/Qiime2/VSearch/parameters.vsearch.denovo.txt outputfile DeNovo/sequences
+Kitty Open
+Pipeline pipelines/OTU_ASV/Up/config.up.qiime2.classifyOTU.txt
+Kitty Closed
+Pipeline pipelines/OTU_ASV/Up/config.up.qiime2.classifyOTU.txt
+Kitty DeNovo
+Pipeline pipelines/OTU_ASV/Up/config.up.qiime2.classifyOTU.txt

@@ -1,0 +1,7 @@
+#Plugin Qiime2DADA2 inputfile parameters.qiime2.dada2.txt outputfile sequences
+#Plugin Qiime2Viz inputfile ../../../../../Parameters/Up/Qiime2/Viz/parameters.viz.featuretable.tabulate.txt outputfile sequences
+#Plugin Copy inputfile sequences-denoising-stats-dada.qza outputfile sequences-chim-stats.qza
+#Plugin Qiime2Viz inputfile ../../../../../Parameters/Up/Qiime2/Viz/parameters.viz.metadata.tabulate.txt outputfile sequences-denoising-stats-dada.qzv
+#Plugin Copy inputfile sequences-table.qza outputfile sequences-table-nochimeras.qza
+#Plugin Copy inputfile sequences-rep-seqs.qza outputfile sequences-rep-seqs-nochimeras.qza
+Pipeline pipelines/OTU_ASV/config.up.qiime2.cluster.txt

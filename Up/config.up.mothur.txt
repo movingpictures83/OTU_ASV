@@ -1,0 +1,8 @@
+#Plugin Mothur inputfile ../../../../../Parameters/PreProcess/Mothur/parameters.mothur.preprocess.forward.txt outputfile .
+#Plugin Mothur inputfile ../../../../../Parameters/Up/PreProcess/Mothur/parameters.mothur.preprocess.reverse.txt outputfile .
+#Plugin SortForwardReverse inputfile ../../../../../Parameters/Up/Mothur/Sort/parameters.sortforwardreverse.1.txt outputfile .
+#Plugin SortForwardReverse inputfile ../../../../../Parameters/Up/Mothur/Sort/parameters.sortforwardreverse.2.txt outputfile .
+#Plugin SortForwardReverse inputfile ../../../../../Parameters/Up/Mothur/Sort/parameters.sortforwardreverse.3.txt outputfile .
+#Plugin Mothur inputfile ../../../../../Parameters/Up/Mothur/PreProcess/parameters.mothur.preprocess.fasta2fastq.txt outputfile .
+#Plugin Mothur inputfile pipeline.mothur outputfile Mock
+Plugin Mothur2PhyloSeq inputfile ../../../../../Parameters/Up/Mothur/parameters.mothur2phyloseq.txt outputfile .

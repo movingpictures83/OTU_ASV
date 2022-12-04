@@ -1,0 +1,5 @@
+#Plugin FeatureClassify inputfile ../../../../../../Parameters/Up/Qiime2/parameters.qiime2.featureclassify.txt outputfile sequences-classified.qza
+Plugin Qiime2Viz inputfile ../../../../../../Parameters/Up/Qiime2/Viz/parameters.viz.metadata.tabulate.clusters.txt outputfile sequences-classified.qzv
+Plugin Qiime2Viz inputfile ../../../../../../Parameters/Up/Qiime2/Viz/parameters.viz.barplot.txt outputfile sequences-barplots-classified.qzv
+Plugin Qiime2Viz inputfile ../../../../../../Parameters/Up/Qiime2/Viz/parameters.viz.featuretable.summarize.clusters.txt outputfile sequences-table-clustered.qzv
+Plugin QiimeTwo2PhyloSeq inputfile ../../../../../../Parameters/Up/Qiime2/parameters.qiimetwo2phyloseq.txt outputfile .

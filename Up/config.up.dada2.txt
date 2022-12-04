@@ -1,0 +1,9 @@
+Plugin FilterAndTrim inputfile parameters.filterAndTrim.txt outputfile output/filtered/
+#Plugin QualityProfile inputfile output/filtered outputfile output/quality
+#Plugin Dereplication inputfile output/filtered outputfile output/dereplication
+#Plugin ErrorRate inputfile output/filtered outputfile output/errorrate
+#Plugin DADA inputfile ../../../../../Parameters/Up/DADA2/parameters.dada.txt outputfile output/dada
+#Plugin MergePairedEnd inputfile parameters.mergePairs.txt outputfile output/merger1
+#Plugin ChimeraRemove inputfile output/merger1.rds outputfile output/nochimeras
+#Plugin ReadTracker inputfile ../../../../Parameters/DADA2/parameters.readtracker.txt outputfile output/readstats
+#Plugin ASVAssign inputfile ../../../../../Parameters/Up/DADA2/parameters.asvassign.txt outputfile output/asv
