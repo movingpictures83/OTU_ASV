@@ -1,0 +1,5 @@
+threads	1
+forwardtruncate	0
+reversetruncate	0
+q	2
+chimeramethod	consensus

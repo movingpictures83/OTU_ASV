@@ -1,0 +1,3 @@
+inputfile	sequences-denoising-stats-dada.qza
+op1	metadata
+op2	tabulate

@@ -1,0 +1,3 @@
+otutable	sequences-table-clustered.qza
+taxtable	sequences-classified.qza
+metadata	../../../../../Mock.mapping.qiime2.txt
