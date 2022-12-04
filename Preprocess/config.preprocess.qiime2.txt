@@ -1,0 +1,4 @@
+#Plugin FASTQ2QZA inputfile ../Parameters/Preprocess/Qiime2/parameters.fastq2qza.txt outputfile sequences-paired-end-demux.qza
+#Plugin Qiime2Viz inputfile ../Parameters/Preprocess/Qiime2/Viz/parameters.viz.demux.txt outputfile sequences-demux-summary.qzv 
+#Plugin QualityFilter inputfile sequences-paired-end-demux.qza outputfile sequences-demux
+Plugin Qiime2Viz inputfile ../Parameters/Preprocess/Qiime2/Viz/parameters.viz.metadata.demux.txt outputfile sequences-demux-filter-stats.gzv
