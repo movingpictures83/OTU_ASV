@@ -1,0 +1,5 @@
+table	sequences-table-clustered.qza
+taxonomy	sequences-classified.qza
+metadata	../../../../../sequences.manifest
+op1	taxa
+op2	barplot

@@ -1,0 +1,3 @@
+inputfile	sequences-classified.qza
+op1	metadata
+op2	tabulate

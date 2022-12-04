@@ -1,0 +1,3 @@
+inputfile	sequences-chim-stats.qza
+op1	metadata
+op2	tabulate
