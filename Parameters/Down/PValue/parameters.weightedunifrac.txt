@@ -1,0 +1,3 @@
+otufile	asv_tab.withgold.csv
+mapping	../../../../../../../sample_data.withgold.csv
+tree	../../asv_tax.withgold.csv
