@@ -1,0 +1,4 @@
+biomfile	mystuff2.biom
+mapping	../Mock.mapping.qiime1.gold.txt
+depth	500
+tree	mystuff.tre
