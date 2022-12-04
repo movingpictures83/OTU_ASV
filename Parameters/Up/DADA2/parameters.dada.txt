@@ -1,0 +1,2 @@
+FASTQ   output/dereplication
+errors  output/errorrate
