@@ -1,0 +1,6 @@
+inputfile	otus.lefse.nounclass.txt
+class	2
+subclass	-1
+subject	1
+outputdir	Biomarkers/
+biomarkerfigures	no

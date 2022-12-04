@@ -1,0 +1,2 @@
+asv.taxonomy.quoted.padded.noNA.csv
+../../../../../../Mock/Gold/asv_tax.csv

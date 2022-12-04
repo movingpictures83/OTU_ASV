@@ -1,0 +1,4 @@
+OTU	sample.otu.norm.csv
+TAX	../../asv.taxonomy.quoted.padded.noNA.csv
+META	../../../../../../../HELIUS_53_55.samples.qiime2.csv
+LEVEL	7

@@ -1,0 +1,5 @@
+otufile	removedDuplicates.tab.csv
+tax	final.tax.csv
+mapping	../../../../../sample_data.withgold.csv
+tree	taxtree.tre
+userandom	False

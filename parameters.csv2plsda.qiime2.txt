@@ -1,0 +1,6 @@
+normabund	../../../Compositional/asv.tab.norm.species.csv
+metadata	sample.data.csv
+samples	plsda.normabund.csv
+categories	obs_names.txt
+observables	var_ID.txt
+targets	testsets.txt
