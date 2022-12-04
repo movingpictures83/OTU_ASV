@@ -1,0 +1,5 @@
+Plugin Copy inputfile Up/output/asv.counts.tsv outputfile Down/ASV/asv.counts.tsv
+Plugin Copy inputfile Up/output/asv.tab.csv outputfile Down/ASV/asv.tab.csv
+Plugin TSV2CSV inputfile Up/output/asv.taxonomy.tsv outputfile Down/ASV/asv.taxonomy.unpadded.csv
+Plugin CSVPad inputfile asv.taxonomy.unpadded.csv outputfile asv.taxonomy.csv
+#Plugin Copy inputfile Up/output/asv.taxonomy.tsv outputfile Down/ASV/asv.taxonomy.tsv

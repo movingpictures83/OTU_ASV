@@ -1,0 +1,4 @@
+#Plugin Copy inputfile Up/Mock.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.opti_mcc.shared outputfile Down/upstream.shared
+#Plugin Copy inputfile Up/Mock.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.opti_mcc.0.03.cons.taxonomy outputfile Down/upstream.0.03.cons.taxonomy
+Plugin Rank2Tax inputfile Up/tax_table.csv outputfile Down/DeNovo/asv.taxonomy.csv
+Plugin Copy inputfile Up/otu_table.csv outputfile Down/DeNovo/asv.tab.csv

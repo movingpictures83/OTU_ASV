@@ -1,0 +1,6 @@
+Plugin Rank2Tax inputfile Up/Open/tax_table.csv outputfile Down/Open/asv.taxonomy.csv
+Plugin Copy inputfile Up/Open/otu_table.csv outputfile Down/Open/asv.tab.csv
+Plugin Rank2Tax inputfile Up/Closed/tax_table.csv outputfile Down/Closed/asv.taxonomy.csv
+Plugin Copy inputfile Up/Closed/otu_table.csv outputfile Down/Closed/asv.tab.csv
+Plugin Rank2Tax inputfile Up/DeNovo/tax_table.csv outputfile Down/DeNovo/asv.taxonomy.csv
+Plugin Copy inputfile Up/DeNovo/otu_table.csv outputfile Down/DeNovo/asv.tab.csv
