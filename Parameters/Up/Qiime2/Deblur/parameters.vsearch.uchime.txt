@@ -1,0 +1,3 @@
+table	sequences-table.qza
+sequences	sequences-rep-seqs.qza
+op	uchime-denovo
