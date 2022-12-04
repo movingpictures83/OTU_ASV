@@ -1,0 +1,2 @@
+pattern	/biorg/data/HELIUS/Mock/*R1.fastq
+file	chopAndTrim.forward.mothur
