@@ -1,0 +1,7 @@
+Prefix pipelines/OTU_ASV/Mock/Gold/
+Plugin CSVMult inputfile ../../Parameters/Gold/parameters.csvmult.gold.txt outputfile asv_tab.unnorm.csv
+Plugin CSVNoUnderscore inputfile asv_tab.unnorm.csv outputfile asv_tab.unnorm.nounderscore.csv
+Plugin CSVNoUnderscore inputfile asv_tax.csv outputfile asv_tax.nounderscore.csv
+Plugin PhyloSeq2Qiime inputfile ../../Parameters/Gold/parameters.phyloseq2qiime.gold.txt outputfile mystuff
+Plugin BIOM2Upgrade inputfile mystuff.biom outputfile mystuff2.biom
+Plugin PlotAlphaDiversity inputfile ../../Parameters/Gold/parameters.alphadiversity.gold.txt outputfile AlphaDiversity

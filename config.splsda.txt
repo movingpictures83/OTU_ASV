@@ -1,0 +1,3 @@
+#Plugin CSVIndex inputfile ../../../../../../../../Parameters/DADA2/Down/parameters.csvindex.txt outputfile sample.data.csv
+#Plugin CSV2PLSDA inputfile ../../../../../../../../Parameters/DADA2/Down/parameters.csv2plsda.txt outputfile .
+Plugin SPLSDA inputfile ../../../../../../../../Parameters/DADA2/Down/parameters.splsda.txt outputfile splsda

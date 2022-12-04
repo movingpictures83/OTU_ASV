@@ -1,0 +1,99 @@
+Prefix pipelines/OTU_ASV/Mock/MaxEE/
+#Mock/MaxEE/Winners/DADA2/ASV/3/
+########################################################################################################
+# DADA2 (ASV), Winner: 3
+Plugin Copy inputfile 3/DADA2/Down/ASV/asv.taxonomy.quoted.padded.noNA.csv outputfile Winners/DADA2/ASV/3/asv.winner.tax.csv
+Plugin Copy inputfile 3/DADA2/Down/ASV/asv.tab.csv outputfile Winners/DADA2/ASV/3/asv.winner.tab.csv
+Plugin Copy inputfile 3/DADA2/Down/ASV/averagedistance.csv outputfile Winners/DADA2/ASV/3/averagedistance.samples.csv
+Plugin Copy inputfile Tutorial/DADA2/Down/ASV/asv.taxonomy.quoted.padded.noNA.csv outputfile Winners/DADA2/ASV/asv.tutorial.tax.csv
+Plugin Copy inputfile Tutorial/DADA2/Down/ASV/asv.tab.csv outputfile Winners/DADA2/ASV/asv.tutorial.tab.csv
+Plugin Copy inputfile Tutorial/DADA2/Down/ASV/averagedistance.csv outputfile Winners/DADA2/ASV/averagedistance.tutorial.csv
+########################################################################################################
+
+########################################################################################################
+# Qiime2_Deblur (Open), Winners: 1, 2, 3, Inf
+Plugin Copy inputfile Tutorial/Qiime2_Deblur/Down/Open/asv.taxonomy.quoted.padded.noNA.csv outputfile Winners/Qiime2_Deblur/Open/asv.tutorial.tax.csv
+Plugin Copy inputfile Tutorial/Qiime2_Deblur/Down/Open/asv.tab.csv outputfile Winners/Qiime2_Deblur/Open/asv.tutorial.tab.csv
+Plugin Copy inputfile Tutorial/Qiime2_Deblur/Down/Open/averagedistance.csv outputfile Winners/Qiime2_Deblur/Open/averagedistance.tutorial.csv
+
+Plugin Copy inputfile 1/Qiime2_Deblur/Down/Open/asv.taxonomy.quoted.padded.noNA.csv outputfile Winners/Qiime2_Deblur/Open/1/asv.winner.tax.csv
+Plugin Copy inputfile 1/Qiime2_Deblur/Down/Open/asv.tab.csv outputfile Winners/Qiime2_Deblur/Open/1/asv.winner.tab.csv
+Plugin Copy inputfile 1/Qiime2_Deblur/Down/Open/averagedistance.csv outputfile Winners/Qiime2_Deblur/Open/1/averagedistance.samples.csv
+
+Plugin Copy inputfile 2/Qiime2_Deblur/Down/Open/asv.taxonomy.quoted.padded.noNA.csv outputfile Winners/Qiime2_Deblur/Open/2/asv.winner.tax.csv
+Plugin Copy inputfile 2/Qiime2_Deblur/Down/Open/asv.tab.csv outputfile Winners/Qiime2_Deblur/Open/2/asv.winner.tab.csv
+Plugin Copy inputfile 2/Qiime2_Deblur/Down/Open/averagedistance.csv outputfile Winners/Qiime2_Deblur/Open/2/averagedistance.samples.csv
+
+Plugin Copy inputfile 3/Qiime2_Deblur/Down/Open/asv.taxonomy.quoted.padded.noNA.csv outputfile Winners/Qiime2_Deblur/Open/3/asv.winner.tax.csv
+Plugin Copy inputfile 3/Qiime2_Deblur/Down/Open/asv.tab.csv outputfile Winners/Qiime2_Deblur/Open/3/asv.winner.tab.csv
+Plugin Copy inputfile 3/Qiime2_Deblur/Down/Open/averagedistance.csv outputfile Winners/Qiime2_Deblur/Open/3/averagedistance.samples.csv
+
+Plugin Copy inputfile Inf/Qiime2_Deblur/Down/Open/asv.taxonomy.quoted.padded.noNA.csv outputfile Winners/Qiime2_Deblur/Open/Inf/asv.winner.tax.csv
+Plugin Copy inputfile Inf/Qiime2_Deblur/Down/Open/asv.tab.csv outputfile Winners/Qiime2_Deblur/Open/Inf/asv.winner.tab.csv
+Plugin Copy inputfile Inf/Qiime2_Deblur/Down/Open/averagedistance.csv outputfile Winners/Qiime2_Deblur/Open/Inf/averagedistance.samples.csv
+########################################################################################################
+
+########################################################################################################
+# Qiime2_Deblur (Closed), Winner: 2
+Plugin Copy inputfile Tutorial/Qiime2_Deblur/Down/Closed/asv.taxonomy.quoted.padded.noNA.csv outputfile Winners/Qiime2_Deblur/Closed/asv.tutorial.tax.csv
+Plugin Copy inputfile Tutorial/Qiime2_Deblur/Down/Closed/asv.tab.csv outputfile Winners/Qiime2_Deblur/Closed/asv.tutorial.tab.csv
+Plugin Copy inputfile Tutorial/Qiime2_Deblur/Down/Closed/averagedistance.csv outputfile Winners/Qiime2_Deblur/Closed/averagedistance.tutorial.csv
+Plugin Copy inputfile 2/Qiime2_Deblur/Down/Closed/asv.taxonomy.quoted.padded.noNA.csv outputfile Winners/Qiime2_Deblur/Closed/2/asv.winner.tax.csv
+Plugin Copy inputfile 2/Qiime2_Deblur/Down/Closed/asv.tab.csv outputfile Winners/Qiime2_Deblur/Closed/2/asv.winner.tab.csv
+Plugin Copy inputfile 2/Qiime2_Deblur/Down/Closed/averagedistance.csv outputfile Winners/Qiime2_Deblur/Closed/2/averagedistance.samples.csv
+########################################################################################################
+
+########################################################################################################
+# Qiime2_Deblur (DeNovo), Winner: 2
+Plugin Copy inputfile Tutorial/Qiime2_Deblur/Down/DeNovo/asv.taxonomy.quoted.padded.noNA.csv outputfile Winners/Qiime2_Deblur/DeNovo/asv.tutorial.tax.csv
+Plugin Copy inputfile Tutorial/Qiime2_Deblur/Down/DeNovo/asv.tab.csv outputfile Winners/Qiime2_Deblur/DeNovo/asv.tutorial.tab.csv
+Plugin Copy inputfile Tutorial/Qiime2_Deblur/Down/DeNovo/averagedistance.csv outputfile Winners/Qiime2_Deblur/DeNovo/averagedistance.tutorial.csv
+Plugin Copy inputfile 2/Qiime2_Deblur/Down/DeNovo/asv.taxonomy.quoted.padded.noNA.csv outputfile Winners/Qiime2_Deblur/DeNovo/2/asv.winner.tax.csv
+Plugin Copy inputfile 2/Qiime2_Deblur/Down/DeNovo/asv.tab.csv outputfile Winners/Qiime2_Deblur/DeNovo/2/asv.winner.tab.csv
+Plugin Copy inputfile 2/Qiime2_Deblur/Down/DeNovo/averagedistance.csv outputfile Winners/Qiime2_Deblur/DeNovo/2/averagedistance.samples.csv
+########################################################################################################
+
+########################################################################################################
+# Qiime2_DADA2 (Open), Winner: 2, Inf
+Plugin Copy inputfile Tutorial/Qiime2_DADA2/Down/Open/asv.taxonomy.quoted.padded.noNA.csv outputfile Winners/Qiime2_DADA2/Open/asv.tutorial.tax.csv
+Plugin Copy inputfile Tutorial/Qiime2_DADA2/Down/Open/asv.tab.csv outputfile Winners/Qiime2_DADA2/Open/asv.tutorial.tab.csv
+Plugin Copy inputfile Tutorial/Qiime2_DADA2/Down/Open/averagedistance.csv outputfile Winners/Qiime2_DADA2/Open/averagedistance.tutorial.csv
+Plugin Copy inputfile 2/Qiime2_DADA2/Down/Open/asv.taxonomy.quoted.padded.noNA.csv outputfile Winners/Qiime2_DADA2/Open/2/asv.winner.tax.csv
+Plugin Copy inputfile 2/Qiime2_DADA2/Down/Open/asv.tab.csv outputfile Winners/Qiime2_DADA2/Open/2/asv.winner.tab.csv
+Plugin Copy inputfile 2/Qiime2_DADA2/Down/Open/averagedistance.csv outputfile Winners/Qiime2_DADA2/Open/2/averagedistance.samples.csv
+Plugin Copy inputfile Inf/Qiime2_DADA2/Down/Open/asv.taxonomy.quoted.padded.noNA.csv outputfile Winners/Qiime2_DADA2/Open/Inf/asv.winner.tax.csv
+Plugin Copy inputfile Inf/Qiime2_DADA2/Down/Open/asv.tab.csv outputfile Winners/Qiime2_DADA2/Open/Inf/asv.winner.tab.csv
+Plugin Copy inputfile Inf/Qiime2_DADA2/Down/Open/averagedistance.csv outputfile Winners/Qiime2_DADA2/Open/Inf/averagedistance.samples.csv
+########################################################################################################
+
+########################################################################################################
+# Qiime2_DADA2 (Closed), Winner: Inf
+Plugin Copy inputfile Tutorial/Qiime2_DADA2/Down/Closed/asv.taxonomy.quoted.padded.noNA.csv outputfile Winners/Qiime2_DADA2/Closed/asv.tutorial.tax.csv
+Plugin Copy inputfile Tutorial/Qiime2_DADA2/Down/Closed/asv.tab.csv outputfile Winners/Qiime2_DADA2/Closed/asv.tutorial.tab.csv
+Plugin Copy inputfile Tutorial/Qiime2_DADA2/Down/Closed/averagedistance.csv outputfile Winners/Qiime2_DADA2/Closed/averagedistance.tutorial.csv
+Plugin Copy inputfile Inf/Qiime2_DADA2/Down/Closed/asv.taxonomy.quoted.padded.noNA.csv outputfile Winners/Qiime2_DADA2/Closed/Inf/asv.winner.tax.csv
+Plugin Copy inputfile Inf/Qiime2_DADA2/Down/Closed/asv.tab.csv outputfile Winners/Qiime2_DADA2/Closed/Inf/asv.winner.tab.csv
+Plugin Copy inputfile Inf/Qiime2_DADA2/Down/Closed/averagedistance.csv outputfile Winners/Qiime2_DADA2/Closed/Inf/averagedistance.samples.csv
+########################################################################################################
+
+########################################################################################################
+# Qiime2_DADA2 (DeNovo), Winner: 2
+Plugin Copy inputfile Tutorial/Qiime2_DADA2/Down/DeNovo/asv.taxonomy.quoted.padded.noNA.csv outputfile Winners/Qiime2_DADA2/DeNovo/asv.tutorial.tax.csv
+Plugin Copy inputfile Tutorial/Qiime2_DADA2/Down/DeNovo/asv.tab.csv outputfile Winners/Qiime2_DADA2/DeNovo/asv.tutorial.tab.csv
+Plugin Copy inputfile Tutorial/Qiime2_DADA2/Down/DeNovo/averagedistance.csv outputfile Winners/Qiime2_DADA2/DeNovo/averagedistance.tutorial.csv
+Plugin Copy inputfile 2/Qiime2_DADA2/Down/DeNovo/asv.taxonomy.quoted.padded.noNA.csv outputfile Winners/Qiime2_DADA2/DeNovo/2/asv.winner.tax.csv
+Plugin Copy inputfile 2/Qiime2_DADA2/Down/DeNovo/asv.tab.csv outputfile Winners/Qiime2_DADA2/DeNovo/2/asv.winner.tab.csv
+Plugin Copy inputfile 2/Qiime2_DADA2/Down/DeNovo/averagedistance.csv outputfile Winners/Qiime2_DADA2/DeNovo/2/averagedistance.samples.csv
+########################################################################################################
+
+########################################################################################################
+# Mothur (DeNovo), Winner: 1
+Plugin Copy inputfile Tutorial/Mothur/Down/DeNovo/asv.taxonomy.quoted.padded.noNA.csv outputfile Winners/Mothur/DeNovo/asv.tutorial.tax.csv
+Plugin Copy inputfile Tutorial/Mothur/Down/DeNovo/asv.tab.csv outputfile Winners/Mothur/DeNovo/asv.tutorial.tab.csv
+Plugin Copy inputfile Tutorial/Mothur/Down/DeNovo/averagedistance.csv outputfile Winners/Mothur/DeNovo/averagedistance.tutorial.csv
+Plugin Copy inputfile 1/Mothur/Down/DeNovo/asv.taxonomy.quoted.padded.noNA.csv outputfile Winners/Mothur/DeNovo/1/asv.winner.tax.csv
+Plugin Copy inputfile 1/Mothur/Down/DeNovo/asv.tab.csv outputfile Winners/Mothur/DeNovo/1/asv.winner.tab.csv
+Plugin Copy inputfile 1/Mothur/Down/DeNovo/averagedistance.csv outputfile Winners/Mothur/DeNovo/1/averagedistance.samples.csv
+########################################################################################################
+
+

@@ -1,0 +1,4 @@
+Plugin CSVIndex inputfile ../../../../../../../../parameters.csvindex.qiime2.txt outputfile sample.data.csv
+#Plugin CSVTranspose inputfile ../../../Compositional/asv.tab.norm.species.csv outputfile normalized.transpose.csv
+Plugin CSV2PLSDA inputfile ../../../../../../../../parameters.csv2plsda.txt outputfile .
+Plugin SPLSDA inputfile ../../../../../../../../parameters.splsda.txt outputfile splsda

@@ -1,0 +1,17 @@
+Kitty Tutorial
+Pipeline pipelines/OTU_ASV/config.asvotu.txt
+Kitty 1
+Pipeline pipelines/OTU_ASV/config.asvotu.txt
+Kitty 2
+Pipeline pipelines/OTU_ASV/config.asvotu.txt
+Kitty 3
+Pipeline pipelines/OTU_ASV/config.asvotu.txt
+Kitty 4
+Pipeline pipelines/OTU_ASV/config.asvotu.txt
+Kitty Inf
+Pipeline pipelines/OTU_ASV/config.asvotu.txt
+
+#Kitty Default
+#Pipeline pipelines/OTU_ASV/config.asvotu.txt
+#Kitty 0
+#Pipeline pipelines/OTU_ASV/config.asvotu.txt

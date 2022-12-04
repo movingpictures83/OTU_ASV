@@ -1,0 +1,10 @@
+#Plugin CSVCollate inputfile parameters.alphaDivCollate.tsv outputfile alphaDivCollate.csv
+#Plugin CSVCollate inputfile parameters.betaDivCollate.tsv outputfile betaDivCollate.csv
+Plugin CSVCollate inputfile parameters.uniFracCollate.tsv outputfile uniFracCollate.csv
+#Plugin CSVAverage inputfile 3/DADA2/Down/Compositional/asv.tab.genus.csv outputfile 3/DADA2/Down/Compositional/asv.tab.genus.average.csv
+#Plugin CSVMerge inputfile files.merge.phylum.txt outputfile compositionCollate.phylum.csv
+#Plugin CSVMerge inputfile files.merge.class.txt outputfile compositionCollate.class.csv
+#Plugin CSVMerge inputfile files.merge.order.txt outputfile compositionCollate.order.csv
+#Plugin CSVMerge inputfile files.merge.family.txt outputfile compositionCollate.family.csv
+#Plugin CSVMerge inputfile files.merge.genus.txt outputfile compositionCollate.genus.csv
+#Plugin CSVMerge inputfile files.merge.species.txt outputfile compositionCollate.species.csv

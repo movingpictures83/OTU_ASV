@@ -1,0 +1,4 @@
+Kitty SPLSDA
+Pipeline pipelines/OTU_ASV/config.splsda.txt
+#Kitty LEfSe
+#Pipeline pipelines/OTU_ASV/config.lefse.txt

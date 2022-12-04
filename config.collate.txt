@@ -1,0 +1,5 @@
+Prefix pipelines/OTU_ASV/
+Kitty Mock/MaxEE
+Pipeline pipelines/OTU_ASV/config.diversitycollate.txt
+Kitty Mock/QTrim
+Pipeline pipelines/OTU_ASV/config.diversitycollate.txt

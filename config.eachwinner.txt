@@ -1,0 +1,8 @@
+Plugin PhyloSeqMark inputfile ../../../../../../Parameters/Winners/parameters.tutorial.mark.txt outputfile asv.tutorial.marked
+Plugin CSVMerge inputfile ../../../../../../merge.tutorial.otu.txt outputfile asv.tab.csv
+Plugin CSVMerge inputfile ../../../../../../merge.tutorial.tax.txt outputfile asv.taxonomy.quoted.padded.noNA.csv
+Plugin Permute inputfile ../../../../../../Parameters/Down/parameters.permute.txt outputfile asv.tab.csv
+Pipeline pipelines/OTU_ASV/config.permute.txt
+Kitty .
+Plugin PValue inputfile ../../../../../../Parameters/Winners/parameters.pvalue.samples.txt outputfile pvalue.samples.csv
+Plugin PValue inputfile ../../../../../../Parameters/Winners/parameters.pvalue.tutorial.txt outputfile pvalue.tutorial.csv

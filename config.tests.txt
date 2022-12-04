@@ -1,0 +1,6 @@
+# No preprocessing necessary for DADA2
+#Pipeline pipelines/OTU_ASV/Preprocess/config.preprocess.qiime2.txt
+#Kitty MaxEE
+#Pipeline pipelines/OTU_ASV/config.maxee.txt
+Kitty QTrim
+Pipeline pipelines/OTU_ASV/config.qtrim.txt

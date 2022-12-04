@@ -1,0 +1,4 @@
+Plugin PhyloSeqNormalize inputfile ../../asv.tab.norm.csv outputfile sample.otu.norm.csv
+Plugin PhyloSeq2LEfSe inputfile ../../../../../../../../parameters.phyloseq2lefse.qiime2.txt outputfile otus.lefse.txt
+Plugin RemoveUnclassified inputfile otus.lefse.txt outputfile otus.lefse.nounclass.txt
+Plugin LEfSe inputfile ../../../../../../../../parameters.lefse.txt outputfile output.lefse

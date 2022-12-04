@@ -1,0 +1,5 @@
+Prefix pipelines/OTU_ASV/
+Kitty Mock
+Pipeline pipelines/OTU_ASV/config.tests.txt
+#Kitty HELIUS_53_55
+#Pipeline pipelines/OTU_ASV/config.tests.txt

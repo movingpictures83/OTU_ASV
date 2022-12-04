@@ -1,0 +1,11 @@
+#Plugin PhyloSeqNormalize inputfile asv.tab.csv outputfile asv.tab.norm.csv
+#Plugin CSVMerge inputfile ../../../../../../../../merge.gold.otu.permute.txt outputfile asv_tab.withgold.csv
+#Plugin CSVMerge inputfile ../../../../../../../../merge.gold.tax.permute.txt outputfile asv_tax.withgold.csv
+#Plugin WeightedUniFrac inputfile ../../../../../../../../Parameters/Winners/parameters.weightedunifrac.txt outputfile weightedunifrac.csv
+#Plugin AverageDistance inputfile ../../../../../../../../Parameters/Winners/parameters.averagedistance.txt outputfile averagedistance.csv
+#Plugin AverageDistance inputfile ../../../../../../../../Parameters/Winners/parameters.averagedistance.tutorial.txt outputfile averagedistance.tutorial.csv
+#Plugin RandomTree inputfile ../../../../../../../../parameters.randomtree.txt outputfile random.tree
+#Plugin RemoveWeights inputfile random.tree outputfile random.unweighted.tree
+#Plugin UniFrac inputfile ../../../../../../../../parameters.unifrac.permutations.txt outputfile unifrac.csv
+Plugin UniFrac inputfile ../../../../../../../../parameters.unifrac.randomtree.txt outputfile unifrac.csv
+Plugin AverageDistance inputfile ../../../../../../../../parameters.averagedistance.txt outputfile averagedistance.csv
