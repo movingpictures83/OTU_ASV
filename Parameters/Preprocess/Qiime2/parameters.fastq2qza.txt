@@ -1,0 +1,2 @@
+manifest	sequences.manifest
+format	PairedEndFastqManifestPhred33V2
