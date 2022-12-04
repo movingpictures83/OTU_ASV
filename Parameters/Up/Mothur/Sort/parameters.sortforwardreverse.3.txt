@@ -1,0 +1,4 @@
+forwardPrefix	Mock3_R1.trim
+reversePrefix	Mock3_R2.trim
+sortedForwardPrefix	Mock3_R1.trim.chop.sorted
+sortedReversePrefix	Mock3_R2.trim.chop.sorted
