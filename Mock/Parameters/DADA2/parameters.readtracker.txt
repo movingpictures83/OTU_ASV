@@ -1,0 +1,4 @@
+FASTQ	/biorg/data/HELIUS/Mock/
+filtered	output/filtered/stats.csv
+DADA	output/dada
+merged	output/nochimeras
