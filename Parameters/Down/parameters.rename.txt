@@ -1,0 +1,3 @@
+replace	rows
+file1	asv.tab.average.csv
+file2	../../rename.csv

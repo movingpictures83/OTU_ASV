@@ -1,0 +1,5 @@
+biomfile	mystuff2.biom
+tree	mystuff.tre
+euclidean
+weighted_unifrac
+unweighted_unifrac

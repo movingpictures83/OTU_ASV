@@ -1,0 +1,4 @@
+biomfile	mystuff2.biom
+mapping	../../../../../mapping.txt
+depth	1000
+tree	mystuff.tre

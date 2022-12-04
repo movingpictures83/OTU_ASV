@@ -1,0 +1,2 @@
+groupfile ../../../../../sample_data.permanova.csv
+distfile weightedunifrac.csv

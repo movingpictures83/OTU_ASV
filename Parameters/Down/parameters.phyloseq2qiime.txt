@@ -1,0 +1,3 @@
+OTU	asv.tab.noUnderscores.csv
+TAX	asv.taxonomy.noUnderscores.csv
+META	../../../../../sample_data.csv
