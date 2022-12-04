@@ -1,0 +1,68 @@
+#Plugin CSVTranspose inputfile asv.tab.csv outputfile asv.tab.transpose.csv
+#Plugin CSVNormalize inputfile asv.tab.transpose.csv outputfile asv.tab.transpose.norm.csv
+#Plugin CSVTranspose inputfile asv.tab.transpose.norm.csv outputfile asv.tab.norm.csv
+#Plugin CSVQuote inputfile asv.taxonomy.csv outputfile asv.taxonomy.quoted.padded.csv
+#Plugin PhyloSeqNAResolve inputfile asv.taxonomy.quoted.padded.csv outputfile asv.taxonomy.quoted.padded.noNA.csv
+#Kitty Compositional/
+#Plugin CSVJoinSplit inputfile ../../../../../../../Parameters/Down/parameters.dada2.composition.txt outputfile asv.tab
+#Kitty Compositional/phylum
+#Pipeline pipelines/OTU_ASV/Down/config.down.avgrename.txt
+#Kitty Compositional/class
+#Pipeline pipelines/OTU_ASV/Down/config.down.avgrename.txt
+#Kitty Compositional/order
+#Pipeline pipelines/OTU_ASV/Down/config.down.avgrename.txt
+#Kitty Compositional/family
+#Pipeline pipelines/OTU_ASV/Down/config.down.avgrename.txt
+#Kitty Compositional/genus
+#Pipeline pipelines/OTU_ASV/Down/config.down.avgrename.txt
+#Kitty Compositional/species
+#Pipeline pipelines/OTU_ASV/Down/config.down.avgrename.txt
+#Kitty .
+#Plugin CSVNoUnderscore inputfile asv.tab.csv outputfile asv.tab.noUnderscores.csv
+#Plugin CSVNoUnderscore inputfile asv.taxonomy.csv outputfile asv.taxonomy.noUnderscores.csv
+#Plugin PhyloSeq2Qiime inputfile ../../../../../../Parameters/Down/parameters.phyloseq2qiime.txt outputfile mystuff
+#Plugin BIOM2Upgrade inputfile mystuff.biom outputfile mystuff2.biom
+#Plugin PlotAlphaDiversity inputfile ../../../../../../Parameters/Down/parameters.alphadiversity.txt outputfile AlphaDiversity
+#Plugin TSV2CSV inputfile AlphaDiversity/alpha_div_collated/chao1.txt outputfile AlphaDiversity/chao1.csv
+#Plugin TSV2CSV inputfile AlphaDiversity/alpha_div_collated/observed_species.txt outputfile AlphaDiversity/observed_species.csv
+#Plugin TSV2CSV inputfile AlphaDiversity/alpha_div_collated/PD_whole_tree.txt outputfile AlphaDiversity/PD_whole_tree.csv
+#Plugin BetaDiversity inputfile ../../../../../../Parameters/Down/parameters.betadiversity.txt outputfile BetaDiversity
+#Plugin TSV2CSV inputfile BetaDiversity/euclidean_mystuff2.txt outputfile BetaDiversity/euclidean_mystuff2.csv
+#Plugin TSV2CSV inputfile BetaDiversity/unweighted_unifrac_mystuff2.txt outputfile BetaDiversity/unweighted_unifrac_mystuff2.csv
+#Plugin TSV2CSV inputfile BetaDiversity/weighted_unifrac_mystuff2.txt outputfile BetaDiversity/weighted_unifrac_mystuff2.csv
+#Plugin CSVUpperTriangular inputfile BetaDiversity/weighted_unifrac_mystuff2.csv outputfile BetaDiversity/weighted_unifrac_mystuff2.upperTriangular.csv
+#Plugin CSVMerge inputfile ../../../../../../merge.gold.otu.txt outputfile asv_tab.withgold.csv
+#Plugin CSVMerge inputfile ../../../../../../merge.gold.tax.txt outputfile asv_tax.withgold.csv
+#Plugin CSVPad inputfile ncbiIDs.csv outputfile ncbiIDs.padded.csv
+#Plugin CSVQuote inputfile ncbiIDs.padded.csv outputfile ncbiIDs.padded.quoted.csv
+#Plugin CSVMerge inputfile ../../../../../../merge.gold.ncbiID.txt outputfile ncbiIDs.withgold.csv
+#################################################################################################
+# DO NOT RERUN.
+#Plugin PhyloSeqMerge inputfile ../../../../../../parameters.phyloseq.merge.txt outputfile removedDuplicates
+#Plugin BuildTree inputfile ncbiIDs.unique.txt outputfile phyloT.tree
+#Plugin NewickFixAdjacent inputfile rooted.tree outputfile phyloT.tree
+###################################################################################################
+#Plugin CSVUnique inputfile ../../../../../../parameters.unique.txt outputfile ncbiIDs.unique.txt
+#Plugin NCBI2Newick inputfile ncbiIDs.unique.txt outputfile phyloT.tree
+#Plugin PhyloSeqTaxTree inputfile ../../../../../../parameters.phyloseq.taxtree.txt outputfile taxtree.tre
+#Plugin CSVRemove inputfile ../../../../../../parameters.remove.txt outputfile final.tax.csv
+#Plugin UniFrac inputfile ../../../../../../parameters.unifrac.txt outputfile unifrac.csv
+#Plugin AverageDistance inputfile ../../../../../../Parameters/Down/parameters.averagedistance.txt outputfile averagedistance.csv
+#Plugin Permute inputfile ../../../../../../Parameters/Down/parameters.permute.txt outputfile asv.tab.csv
+#Pipeline pipelines/OTU_ASV/config.permute.txt
+#Kitty .
+Plugin PValue inputfile ../../../../../../Parameters/Down/PValue/parameters.pvalue.txt outputfile pvalue.csv
+##################################################################################################
+######Plugin WeightedUniFrac inputfile ../../../../../../Parameters/Down/parameters.weightedunifrac.txt outputfile weightedunifrac.csv
+#####Plugin CSVUnPad inputfile weightedunifrac.padded.csv outputfile weightedunifrac.unpadded.csv
+#####Plugin CSVComma inputfile weightedunifrac.unpadded.csv outputfile weightedunifrac.csv
+#####Plugin PERMANOVA inputfile ../../../../../../Parameters/Down/parameters.permanova.txt outputfile pvalue.data.txt
+#Pipeline pipelines/OTU_ASV/config.permute.txt
+#Kitty .
+#Plugin AverageDistance inputfile ../../../../../../parameters.averagedistance.benchmark.txt outputfile averagedistance.csv
+#ONLY FOR HELIUS
+#Kitty Differential
+#Pipeline pipelines/OTU_ASV/config.differential.txt
+
+
+#Plugin PruneInternals inputfile taxtree.tre outputfile taxtree.pruned.tre

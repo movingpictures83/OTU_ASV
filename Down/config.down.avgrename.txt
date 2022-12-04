@@ -1,0 +1,2 @@
+Plugin CSVAverage inputfile asv.tab.csv outputfile asv.tab.average.csv
+Plugin CSVRename inputfile ../../../../../../../../Parameters/Down/parameters.rename.txt outputfile asv.tab.average.renamed.csv

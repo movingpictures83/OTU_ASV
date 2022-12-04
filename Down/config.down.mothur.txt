@@ -1,0 +1,2 @@
+Kitty DeNovo
+Pipeline pipelines/OTU_ASV/Down/config.down.txt

@@ -1,0 +1,6 @@
+Kitty Open
+Pipeline pipelines/OTU_ASV/Down/config.down.txt
+Kitty Closed
+Pipeline pipelines/OTU_ASV/Down/config.down.txt
+Kitty DeNovo
+Pipeline pipelines/OTU_ASV/Down/config.down.txt
