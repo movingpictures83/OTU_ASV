@@ -1,0 +1,5 @@
+table	sequences-table-nochimeras.qza
+sequences	sequences-rep-seqs-nochimeras.qza
+referencesequences ../../../../../SILVA/silva-138-99-seqs.qza
+percidentity	0.97
+op	cluster-features-closed-reference

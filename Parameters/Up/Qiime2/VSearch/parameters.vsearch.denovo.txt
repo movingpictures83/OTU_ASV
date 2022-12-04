@@ -1,0 +1,4 @@
+table	sequences-table-nochimeras.qza
+sequences	sequences-rep-seqs-nochimeras.qza
+percidentity	0.99
+op	cluster-features-de-novo
