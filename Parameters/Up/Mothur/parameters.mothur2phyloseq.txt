@@ -1,0 +1,2 @@
+shared	Mock.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.opti_mcc.shared
+taxonomy	Mock.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.opti_mcc.0.03.cons.taxonomy
