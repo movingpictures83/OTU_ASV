@@ -1,0 +1,4 @@
+set.dir(output=\"pipelines/OTU_ASV/Mock/QTrim/Q15_ML145/Mothur/Up\")
+fastq.info(fastq=\"$f\")
+trim.seqs(fasta=current, qfile=current, oligos=\"pipelines/OTU_ASV/HELIUS.fakeprimers.oligos\", qaverage=15)
+summary.seqs(fasta=current)
