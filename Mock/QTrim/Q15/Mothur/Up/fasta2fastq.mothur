@@ -1,0 +1,2 @@
+set.dir(output=\"pipelines/OTU_ASV/Mock/QTrim/Q15/Mothur/Up\")
+make.fastq(fasta=$f.trim.chop.sorted.fasta, qfile=$f.trim.chop.sorted.qual)
