@@ -1,0 +1,3 @@
+FASTQ	output/dereplication
+DADA	output/dada
+minOverlap	30
