@@ -1,0 +1,5 @@
+set.dir(output=\"pipelines/OTU_ASV/Mock/MaxEE/4/Mothur/Up\")
+fastq.info(fastq=\"$f\")
+trim.seqs(fasta=current, qfile=current, oligos=\"pipelines/OTU_ASV/HELIUS.fakeprimers.oligos\")
+chop.seqs(fasta=current, qfile=current, numbases=210, short=T)
+summary.seqs(fasta=current)
