@@ -1,0 +1,2 @@
+inputfile	../../../../sequences-paired-end-demux.qza
+op	join-pairs
