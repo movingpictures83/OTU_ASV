@@ -1,0 +1,126 @@
+###########################################################################
+# NOTE: This test assumes we are following the tutorial at:
+#       https://mothur.org/wiki/miseq_sop/
+###########################################################################
+# Set output/Default directory
+MYOUTPUT=pipelines/OTU_ASV/Mock/QTrim/Q25/Mothur/Up/
+set.dir(output=$MYOUTPUT)
+###########################################################################
+
+###########################################################################
+# Take forward and reverse sequences, complement reverse, make contigs
+# Note: Supposedly this removes primers, equivalent to trimLeft?
+make.contigs(file=pipelines/OTU_ASV/Mock/Mock.files, processors=8, deltaq=0, maxee=2)
+summary.seqs(fasta=$MYOUTPUT/Mock.trim.contigs.fasta)
+###########################################################################
+
+# Step 1: Remove sequences that are longer than 16S region
+#         Remove sequences that have ambiguous bases
+# TUTORIAL HAS YOU EYE-BALL THE 275
+# If you don't provide anything, screen.seqs doesn't run
+# Will leave maxlength=275 (more obvious), remove maxambig
+screen.seqs(fasta=$MYOUTPUT/Mock.trim.contigs.fasta, group=$MYOUTPUT/Mock.contigs.groups, maxambig=0, maxlength=275, contigsreport=$OUTPUT/Mock.contigs.report, minoverlap=30)
+get.current()
+summary.seqs(fasta=current)
+unique.seqs(fasta=$MYOUTPUT/Mock.trim.contigs.good.fasta)
+count.seqs(name=$MYOUTPUT/Mock.trim.contigs.good.names, group=$MYOUTPUT/Mock.contigs.good.groups)
+summary.seqs(count=$MYOUTPUT/Mock.trim.contigs.good.count_table)
+#screen.seqs(fasta=current, group=current, summary=current, maxambig=0, maxlength=275)
+#summary.seqs(fasta=current)
+#screen.seqs(fasta=current, contigsreport=$MYOUTPUT/Mock.contigs.report, summary=current, minoverlap=30, mismatches=8)
+#screen.seqs(fasta=current, contigsreport=$MYOUTPUT/Mock.contigs.report, summary=current, minoverlap=30, mismatches=16)
+#screen.seqs(fasta=current, contigsreport=$MYOUTPUT/Mock.contigs.report, summary=current, minoverlap=30, mismatches=32)
+#screen.seqs(fasta=current, contigsreport=$MYOUTPUT/Mock.contigs.report, summary=current, minoverlap=30)
+# Step 2: Remove duplicate sequences
+#unique.seqs(fasta=current)
+# Step 3: For each sequence, count the number of groups in which it belongs
+#count.seqs(name=current, group=current)
+#summary.seqs(count=current)
+
+#Align sequences
+# NOTE: CHECK IF THIS IS V1.32
+pcr.seqs(fasta=pipelines/OTU_ASV/SILVA/silva.bacteria.fasta, start=11894, end=25319, keepdots=F, processors=8)
+rename.file(input=$MYOUTPUT/silva.bacteria.pcr.fasta, new=$MYOUTPUT/silva.v4.fasta)
+summary.seqs(fasta=$MYOUTPUT/silva.v4.fasta)
+align.seqs(fasta=$MYOUTPUT/Mock.trim.contigs.good.unique.fasta, reference=pipelines/OTU_ASV/SILVA/silva.v4.fasta)
+summary.seqs(fasta=$MYOUTPUT/Mock.trim.contigs.good.unique.align, count=$MYOUTPUT/Mock.trim.contigs.good.count_table)
+
+#Eliminate reads outside of the main alignment space
+
+
+#align.seqs(fasta=current, reference=pipelines/OTU_ASV/SILVA/silva.bacteria.fasta, flip=t, threshold=0.5, processors=32)
+#align.seqs(fasta=current, reference=pipelines/OTU_ASV/SILVA/silva.bacteria.fasta, flip=f, processors=32)
+#align.seqs(fasta=current, reference=pipelines/OTU_ASV/SILVA/silva.bacteria.fasta, flip=t, threshold=0.75, processors=32)
+#align.seqs(fasta=current, reference=pipelines/OTU_ASV/SILVA/silva.bacteria.fasta)
+#align.seqs(fasta=current, reference=pipelines/OTU_ASV/SILVA/silva.bacteria.fasta, flip=t, threshold=0.5, processors=32, ksize=6) 
+#summary.seqs(fasta=current, count=current)
+
+#Eliminate reads outside of the main alignment space
+# EYE BALL THESE AS WELL
+screen.seqs(fasta=$MYOUTPUT/Mock.trim.contigs.good.unique.align, count=$MYOUTPUT/Mock.trim.contigs.good.count_table, summary=$MYOUTPUT/Mock.trim.contigs.good.unique.summary)
+#screen.seqs(fasta=$MYOUTPUT/Mock.trim.contigs.good.unique.align, count=$MYOUTPUT/Mock.trim.contigs.good.count_table, summary=$MYOUTPUT/Mock.trim.contigs.good.unique.summary, start=1968, end=11550, maxhomop=8)
+summary.seqs(fasta=current, count=current)
+
+#screen.seqs(fasta=stability.trim.contigs.good.unique.align, count=stability.trim.contigs.good.count_table, summary=stability.trim.contigs.good.unique.summary, start=1968, end=11550, maxhomop=8)
+#screen.seqs(fasta=current, count=current, summary=current, start=13862, end=23444, maxhomop=8)
+#summary.seqs(fasta=current, count=current)
+#summary.seqs(fasta=current, name=current, processors=32)
+
+# Filter removes spaces and .'s from sequences, does not remove sequences themselves
+# Unique can, but does not this time
+filter.seqs(fasta=$MYOUTPUT/Mock.trim.contigs.good.unique.good.align, vertical=T, trump=.)
+unique.seqs(fasta=$MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.fasta, count=$MYOUTPUT/Mock.trim.contigs.good.count_table)
+pre.cluster(fasta=$MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.unique.fasta, count=$MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.count_table, diffs=2)
+chimera.vsearch(fasta=$MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.unique.precluster.fasta, count=$MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.unique.precluster.count_table, dereplicate=t)
+remove.seqs(fasta=$MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.unique.precluster.fasta, accnos=$MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.unique.precluster.denovo.vsearch.accnos, count=$MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.unique.precluster.count_table)
+#summary.seqs(fasta=current, count=current)
+summary.seqs(fasta=current, count=current)
+
+
+#filter.seqs(fasta=current, vertical=T, trump=.)
+#summary.seqs(fasta=current, count=current)
+#unique.seqs(fasta=current, count=current)
+#summary.seqs(fasta=current, count=current)
+#pre.cluster(fasta=current, count=current, diffs=2)
+#summary.seqs(fasta=current, count=current)
+#chimera.vsearch(fasta=current, count=current, dereplicate=t)
+#remove.seqs(fasta=current, accnos=current)
+#summary.seqs(fasta=current, count=current)
+
+
+# Chimera removal
+#chimera.vsearch(fasta=current, name=current, group=current, processors=32)
+#remove.seqs(accnos=current, fasta=current, name=current, group=current, dups=T)
+#summary.seqs(fasta=current, name=current, processors=32)
+
+
+classify.seqs(fasta=$MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=$MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.unique.precluster.pick.count_table, reference=pipelines/OTU_ASV/trainset/trainset9_032012.pds.fasta, taxonomy=pipelines/OTU_ASV/trainset/trainset9_032012.pds.tax, cutoff=80)
+remove.lineage(fasta=$MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta, count=$MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.unique.precluster.pick.count_table, taxonomy=$MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.taxonomy, taxon=Chloroplast-Mitochondria-unknown-Archaea-Eukaryota)
+system(command=cp $MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.unique.precluster.pick.fasta $MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.fasta)
+system(command=cp $MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.unique.precluster.pick.count_table $MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.count_table)
+#summary.tax(taxonomy=current, count=current)
+# Step 11: Separate abundant and rare sequences (TMC leaving out)
+#split.abund(fasta=stability.trim.contigs.unique.filter.unique.precluster.pick.fasta, count=stability.trim.contigs.unique.filter.unique.precluster.denovo.uchime.pick.count_table, cutoff=1)
+#summary.seqs(fasta=stability.trim.contigs.unique.filter.unique.precluster.pick.abund.fasta, count=stability.trim.contigs.unique.filter.unique.precluster.denovo.uchime.pick.abund.count_table, processors=8)
+###########################################################################
+
+###########################################################################
+# Check error rates
+#get.groups(count=current, fasta=current, groups=Mock)
+###########################################################################
+
+
+###########################################################################
+# Cluster
+#
+# 1. Bin based on taxonomy (This goes based on Order)
+#remove.groups(count=$MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.count_table, fasta=$MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.fasta, taxonomy=$MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, groups=Mock)
+cluster.split(fasta=$MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.fasta, count=$MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.count_table, taxonomy=$MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, splitmethod=classify, taxlevel=7, cutoff=0.03)
+# 2. Count sequences in each OTU
+make.shared(list=$MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.opti_mcc.list, count=$MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.count_table, label=0.03)
+###########################################################################
+
+
+###########################################################################
+# 3. Labeling
+classify.otu(list=$MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.opti_mcc.list, count=$MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.unique.precluster.pick.pick.count_table, taxonomy=$MYOUTPUT/Mock.trim.contigs.good.unique.good.filter.unique.precluster.pick.pds.wang.pick.taxonomy, label=0.03)
