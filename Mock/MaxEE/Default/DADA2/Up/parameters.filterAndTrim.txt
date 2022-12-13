@@ -1,0 +1,3 @@
+FASTQ	/biorg/data/HELIUS/Mock/
+truncForward	0
+truncReverse	0
