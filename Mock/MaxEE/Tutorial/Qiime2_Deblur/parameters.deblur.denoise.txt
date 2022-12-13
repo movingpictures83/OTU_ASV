@@ -1,0 +1,4 @@
+inputfile	sequences-demux-joined.qza
+trimlength	220
+lefttrimlen	10
+meanerror	0.004
