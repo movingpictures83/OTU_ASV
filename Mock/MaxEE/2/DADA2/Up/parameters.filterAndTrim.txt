@@ -1,0 +1,6 @@
+FASTQ	/biorg/data/HELIUS/Mock/
+trimForward	19
+trimReverse	20
+truncForward	240
+truncReverse	210
+maxEE	2
