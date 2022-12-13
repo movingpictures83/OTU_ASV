@@ -1,0 +1,4 @@
+inputfile	../../../../sequences-paired-end-demux.qza
+minovlen	10
+maxdiffs	10
+op	join-pairs
