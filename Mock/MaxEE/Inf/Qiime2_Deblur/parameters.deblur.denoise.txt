@@ -1,0 +1,3 @@
+inputfile	sequences-demux-joined.qza
+trimlength	240
+lefttrimlen	19
